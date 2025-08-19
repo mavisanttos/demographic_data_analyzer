@@ -3,6 +3,7 @@ import pandas as pd # importa a biblioteca Pandas
 def calculate_demographic_data(print_data=True): # cria uma função
     # leitura dos dados
     df = pd.read_csv('adult.data.csv')
+    # limpeza dos dados
     df = df[df['workclass'] != '?']
     df = df[df['occupation'] != '?']
     df = df[df['native-country'] != '?']
